@@ -1,11 +1,15 @@
+import Banner from "./components/Banner";
+import Nav from "./components/Nav"
+
 function App() {
 
   return (
     <>
-      <h2 className="text-5xl text-blue-900">DevStack</h2>
+      <Nav/>
+      <Banner/>
     </>
-  )
+  );
 
 }
 
-export default App
+export default App;
