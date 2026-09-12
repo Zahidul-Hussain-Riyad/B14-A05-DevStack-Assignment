@@ -3,7 +3,7 @@ import banner from "../assets/banner-stack.png";
 
 const Banner = () => {
   return (
-    <section className="max-w-6xl mx-auto mt-6 border border-dotted border-blue-400">
+    <section className="max-w-7xl mx-auto mt-6 border border-dotted border-blue-400">
 
       <div className="flex flex-col lg:flex-row items-center justify-between px-8 py-10 lg:px-10 lg:py-12">
 
