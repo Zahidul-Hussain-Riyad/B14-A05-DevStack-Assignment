@@ -1,0 +1,44 @@
+*** The name of my project is DevStack
+
+
+*** DevStack is a simple and responsive web application that helps developers explore different technologies and build their own development stack. Users can browse technologies, see their details, and add or remove technologies from their personal stack.
+
+
+*** Technologies that used - React.js, TypeScript, Tailwind CSS, DaisyUI, JavaScript, JSON, Vite.
+
+
+Three Features about my project is -
+1. Users can explore different technologies such as Frontend, Backend, Database, Language, Styling, DevOps, and Tools.
+2. Users can add technologies to their own stack and see the selected technologies in the "Your Stack" section.
+3. Users can add a technology to their stack and remove it whenever they want. The stack count and total stock update automatically.
+
+
+
+
+
+
+
+1. What is JSX, and why is it used in React?
+Ans: JSX stands for JavaScript XML. It allows us to write HTML-like code inside JavaScript or TypeScript. React uses JSX to make UI code easier to write and understand.
+
+2. What is the difference between props and state?
+Ans: Props are used to pass data from a parent component to a child component. Props are read-only.
+     State is data managed inside a component. When state changes, React updates the UI.
+
+3. What does the `useState` hook do, and where did you use it in this project?
+Ans: `useState` is a React Hook used to store and update data inside a component.In this project, I used `useState` in the `Technologies` component to store the selected technologies:
+```tsx
+const [selectedTechnologies, setSelectedTechnologies] =
+  useState<Itechnology[]>([]);
+
+4. What does the useEffect hook do, and why did you need it to load the JSON data?
+Ans: useEffect is used to perform side effects in a React component, such as fetching data from an API or file. In this project, the JSON data is loaded using fetch() from technologies.json. If useEffect is used for the fetch, it makes sure the data loading happens after the component renders.
+
+5. Why does every item in a .map() list need a unique key prop?
+Ans: React needs a unique key to identify each item in a list. It helps React understand which item was added, removed, or changed.
+
+6. What is conditional rendering? Show one place you used it.
+Ans: Conditional rendering means showing different UI depending on a condition. In this project, I used it in the YourStack component.
+
+7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+Ans: A parent sends data to a child using props. The child can send something back to the parent by calling a function passed through props.
