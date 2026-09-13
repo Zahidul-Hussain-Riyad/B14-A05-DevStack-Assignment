@@ -7,23 +7,24 @@ import type { Itechnology } from "./types/technologyType";
 const technologyFetch = async (): Promise<Itechnology[]> => {
   const res = await fetch("/data/technologies.json");
   const data = await res.json();
+
   return data;
 };
 
 function App() {
-
   const technologyPromise = technologyFetch();
 
   return (
     <>
       <Nav />
+
       <Banner />
-      <Suspense fallback={<h2>Loading....</h2>}>
+
+      <Suspense fallback={<h2 className="text-center mt-10">Loading....</h2>}>
         <Technologies technologyPromise={technologyPromise} />
       </Suspense>
     </>
   );
-  
 }
 
 export default App;
